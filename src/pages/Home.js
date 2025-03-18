@@ -9,10 +9,10 @@ const Home = () => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const bikesResponse = await api.get("/bikes");
+                const bikesResponse = await api.get("/bike");
                 setBikes(bikesResponse.data);
 
-                const productsResponse = await api.get("/products");
+                const productsResponse = await api.get("/product");
                 setProducts(productsResponse.data);
             } catch (error) {
                 console.error("Error fetching data:", error);

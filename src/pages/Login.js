@@ -15,8 +15,8 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await api.post("/auth/login", credentials);
-            localStorage.setItem("token", response.data.token);
-            navigate("/admin");
+            localStorage.setItem("token", response.data.access_token);
+            navigate("/");
         } catch (error) {
             setError("Invalid username or password.");
         }
